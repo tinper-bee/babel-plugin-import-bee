@@ -29,9 +29,9 @@ export default class Plugin {
         this.specified = null;
         this.libraryObjs = null;
         this.selectedMethods = null;
-        this.libraryName = libraryName;
+        this.libraryName = 'tinper-bee';
         this.libraryDirectory = typeof libraryDirectory === 'undefined'
-            ? 'lib'
+            ? 'dist'
             : libraryDirectory;
         this.camel2DashComponentName = typeof camel2DashComponentName === 'undefined'
             ? true
