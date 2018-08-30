@@ -34,7 +34,7 @@ export default class Plugin {
             ? 'dist'
             : libraryDirectory;
         this.camel2DashComponentName = typeof camel2DashComponentName === 'undefined'
-            ? true
+            ? false
             : camel2DashComponentName;
         this.camel2UnderlineComponentName = camel2UnderlineComponentName;
         this.style = style || false;
