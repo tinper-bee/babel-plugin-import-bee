@@ -1,0 +1,59 @@
+{
+  "name": "babel-plugin-import-bee",
+  "version": "2.0.0",
+  "description": "Tinper-bee modular import plugin for babel.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinper-bee/babel-plugin-import-bee"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib && babel src --out-dir lib"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "keywords": [
+    "babel-plugin",
+    "tinper-bee"
+  ],
+  "author": "Kvkens <yueming@yonyou.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.34",
+    "@babel/core": "^7.0.0-beta.34",
+    "@babel/polyfill": "^7.0.0-beta.34",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "@babel/register": "^7.0.0-beta.34",
+    "babel-core": "^7.0.0-0",
+    "babel-istanbul": "^0.12.2",
+    "babel-preset-umi": "^0.2.0",
+    "coveralls": "^2.11.6",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "expect": "^1.13.4",
+    "material-ui": "^0.15.4",
+    "mocha": "^2.3.4",
+    "pre-commit": "~1.1.2",
+    "react-toolbox": "^1.2.5"
+  },
+  "babel": {
+    "presets": [
+      [
+        "umi",
+        {
+          "commonjs": true,
+          "disableTransform": true
+        }
+      ]
+    ]
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@babel/helper-module-imports": "^7.0.0-beta.34"
+  }
+}
