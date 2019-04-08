@@ -29,7 +29,7 @@ export default class Plugin {
         this.specified = null;
         this.libraryObjs = null;
         this.selectedMethods = null;
-        this.libraryName = 'tinper-bee';
+        this.libraryName = libraryName;
         this.libraryDirectory = typeof libraryDirectory === 'undefined'
             ? 'dist'
             : libraryDirectory;
@@ -161,7 +161,6 @@ export default class Plugin {
         if (!node.object || !node.object.name) return;
 
         if (this.libraryObjs[node.object.name]) {
-            // antd.Button -> _Button
             path.replaceWith(this.importMethod(node.property.name, file));
         } else if (this.specified[node.object.name]) {
             node.object = this.importMethod(this.specified[node.object.name], file);
