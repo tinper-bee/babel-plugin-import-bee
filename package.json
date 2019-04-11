@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-import-bee",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Tinper-bee modular import plugin for babel.",
   "repository": {
     "type": "git",
