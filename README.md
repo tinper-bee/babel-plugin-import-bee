@@ -13,7 +13,6 @@ import { Button } from 'tinper-bee';        // 这样会把整个组件库全部
 import Button from 'tinper-bee/lib/Button'; // 单独使用组件，按需使用
 ```
 
-**注意：插件目前是不支持vendor，CommonChunk插件和本插件不能同时使用，否则会出现vendor过大重复的问题，同时也不适合多页面程序，会导致构建体积过大重复的问题，切记。**
 
 
 ## 2. 安装与配置
@@ -43,3 +42,5 @@ npm install babel-plugin-import-bee -D
 1. 本插件不能与`CommonChunk`、`cacheGroups`一起使用，会造成体积更大，原因是优化提取代码后，会把组件库一起优化进去，导致两头都在优化代码会产生冲突重复。
 2. 多页面入口不适用，会导致`vendor`失效后，每一个`entry`会有一份`node_modules`的第三方代码+按需组件的代码，冗余过多，体积大。
 3. 适合普通SPA项目使用。
+
+**注意：插件目前是不支持vendor，CommonChunk插件和本插件不能同时使用，否则会出现vendor过大重复的问题，同时也不适合多页面程序，会导致构建体积过大重复的问题，切记。**
