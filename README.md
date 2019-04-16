@@ -24,7 +24,9 @@ npm install babel-plugin-import-bee -D
 ```
 ## 使用
 
-然后编辑`.babelrc`文件,添加下面的配置
+### 1. 一般项目使用
+
+编辑`.babelrc`文件,添加下面的配置：
 
 ```js
 {
@@ -35,6 +37,19 @@ npm install babel-plugin-import-bee -D
     }]
   ]
 }
+```
+
+### 2. UCF-WEB 使用
+
+编辑`ucf.config`添加如下配置：
+```bash
+babel_plugins: [
+    [require.resolve("babel-plugin-import-bee"),
+    {
+        "libraryName": "tinper-bee",
+        "libraryDirectory": "lib"
+    }]
+]
 ```
 
 ## 3. 注意事项说明
